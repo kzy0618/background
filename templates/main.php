@@ -1,9 +1,6 @@
 <?php
 script('background', 'script');
-script('background', 'jquery.min');
-script('background', 'bootstrap.min');
 style('background', 'style');
-style('background', 'bootstrap.min');
 ?>
 
 <div id="app">

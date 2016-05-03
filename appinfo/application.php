@@ -16,12 +16,18 @@ class Application extends App {
 		/**
 		 * Controllers
 		 */
-		$container->registerService ( 'PageController', function (SimpleContainer $c) {
-			return new PageController ( $c->query ( 'AppName' ), $c->query ( 'Request' ), $c->query ( 'Config' ) );
+		$container->registerService ( 'PageController', function (SimpleContainer $c) use ($server) {
+			return new PageController ( $c->query ( 'AppName' ), 
+						$c->query ( 'Request' ),
+						$c->query ( 'Config' ), 
+						$c->query('CurrentUID'));
 		} );
 		
-		$container->registerService ( 'SettingsController', function (SimpleContainer $c) {
-			return new SettingsController ( $c->query ( 'AppName' ), $c->query ( 'Request' ), $c->query ( 'Config' ) );
+		$container->registerService ( 'SettingsController', function (SimpleContainer $c) use ($server) {
+			return new SettingsController ( $c->query ( 'AppName' ), 
+							$c->query ( 'Request' ), 
+							$c->query ( 'Config' ), 
+							$c->query('CurrentUID'));
 		} );
 		
 		/**

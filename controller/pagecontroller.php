@@ -16,6 +16,7 @@ use OCP\IConfig;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Controller;
+use OCP\IUserSession;
 
 class PageController extends Controller {
 
@@ -23,9 +24,9 @@ class PageController extends Controller {
 	private $config;
 
 	public function __construct($AppName, IRequest $request, IConfig $config, $UserId){
-		parent::__construct($AppName, $request);
-		$this->userId = $UserId;
+		parent::__construct($AppName, $request);	
 		$this->config = $config;
+		$this->userId = $UserId;
 	}
 
 	/**

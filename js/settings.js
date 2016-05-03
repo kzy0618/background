@@ -1,17 +1,15 @@
-	function saveSettings(input) {		
-	    $.ajax({
-	    	 cache: false,
-	    	 async: true,
-	         type: "POST",
-	         url: OC.generateUrl('/apps/background/settings'),
-	         data: "userId=" + $('#name').attr('value') 
-	               + "&key=" + input.id 
-	               + "&value=" + input.value,
-	         success: function(msg){
-	                     alert( "Data Saved: " + msg );
-	                  },
-	         error: function(jqXHR, textStatus, errorThrown){
-	                      console.log(errorThrown);
-	                      console.log(jqXHR);
-	                  }
-	    });
+$(document).ready(function() {
+	function saveSettings() {
+		//OC.msg.startSaving('#activity_notifications_msg');
+		var post = $('#background').serialize();
+
+		$.post(OC.generateUrl('/apps/background/settings'), post, function(response) {
+			//OC.msg.finishedSuccess('#activity_notifications_msg', response.data.message);
+		});
+	}
+
+	var $activityNotifications = $('#background');
+	$activityNotifications.find('input[type=text]').change(saveSettings);
+
+	//$activityNotifications.find('select').change(saveSettings);
+});
