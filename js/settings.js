@@ -1,13 +1,12 @@
-$(document).ready(function() {
-	function saveSettings(key, value) {		
+	function saveSettings(input) {		
 	    $.ajax({
 	    	 cache: false,
 	    	 async: true,
 	         type: "POST",
 	         url: OC.generateUrl('/apps/background/settings'),
 	         data: "userId=" + $('#name').attr('value') 
-	               + "&key=" + key 
-	               + "&value=" + value,
+	               + "&key=" + input.id 
+	               + "&value=" + input.value,
 	         success: function(msg){
 	                     alert( "Data Saved: " + msg );
 	                  },
@@ -16,13 +15,3 @@ $(document).ready(function() {
 	                      console.log(jqXHR);
 	                  }
 	    });
-	}
-
-	$('#name').blur(saveSettings($('#name').attr('id'), $('#name').val()));
-	$('#age').blur(saveSettings($('#age').attr('id'), $('#age').val()));
-	$('#background').keypress(function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-		}
-	});
-});
