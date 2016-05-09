@@ -28,7 +28,7 @@ $container->query('OCP\INavigationManager')->add(function () use ($container) {
 		'order' => 10,
 
 		// the route that will be shown on startup
-		'href' => $urlGenerator->linkToRoute('background.page.index'),
+		'href' => $urlGenerator->linkToRoute('background.settings.getUserValue'),
 
 		// the icon that will be shown in the navigation
 		// this file needs to exist in img/

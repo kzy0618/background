@@ -19,8 +19,7 @@
  */
 return [
     'routes' => [
-	   ['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
 	   ['name' => 'settings#getUserValue', 'url' => '/settings', 'verb' => 'GET'],
-           ['name' => 'settings#setBackground', 'url' => '/settings', 'verb' => 'POST'],
+           ['name' => 'settings#setBackground', 'url' => '/settings', 'verb' => 'POST']
     ]
 ];

@@ -21,11 +21,13 @@ class SettingsController extends Controller {
 
 	private $config;
 	private $userId;
+	private $l10n;
 
-	public function __construct($AppName, IRequest $request,IConfig $config, $UserId){
+	public function __construct($AppName, IRequest $request,IConfig $config, IL10N $l10n, $UserId){
 		parent::__construct($AppName, $request);
 		$this->userId = $UserId;
 		$this->config = $config;
+		$this->l10n = $l10n;
 	}
 
 	/**
@@ -33,14 +35,17 @@ class SettingsController extends Controller {
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
 	 */
-	public function getUserValue($key) {
-		$this->config->getUserValue($this->userId, $this->appName, $key);
-		return new DataResponse(array(
-			'data' => array(
-				'message'	=> (string) $this->l10n->t('Your settings have been updated.'),
-			),
-		));
+	public function getUserValue() {
+		$params = ['name' => $this->getItem('name'),
+			'age' => $this->getItem('age'),
+			'gender' => $this->getItem('gender'),
+			'addr' => $this->getItem('addr')];
+		return new TemplateResponse('background', 'main', $params);
 	}
+
+	protected function getItem($key){
+                return $this->config->getUserValue($this->userId, $this->appName, $key);
+        }
 	
 	protected function updateItem($key, $value){
 		if ( ( $value==='' ) || ( $value === NULL ) ){
@@ -60,6 +65,6 @@ class SettingsController extends Controller {
 		$this->updateItem('age', $age);
 		$this->updateItem('gender', $gender);
 		$this->updateItem('addr', $addr);
-		return new TemplateResponse('background', 'main', null);  // templates/main.php
+		return $this->getUserValue();  // templates/main.php
 	}
 }

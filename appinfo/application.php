@@ -16,26 +16,28 @@ class Application extends App {
 		/**
 		 * Controllers
 		 */
-		$container->registerService ( 'PageController', function (SimpleContainer $c) use ($server) {
-			return new PageController ( $c->query ( 'AppName' ), 
-						$c->query ( 'Request' ),
-						$c->query ( 'Config' ), 
-						$c->query('CurrentUID'));
-		} );
-		
-		$container->registerService ( 'SettingsController', function (SimpleContainer $c) use ($server) {
+		$container->registerService ( 'SettingsController', function (IContainer $c){
+			$server = $c->query('ServerContainer');
 			return new SettingsController ( $c->query ( 'AppName' ), 
-							$c->query ( 'Request' ), 
-							$c->query ( 'Config' ), 
+							$server->getRequest(),
+				                        $server->getConfig(),
+							$c->query('L10N'),
 							$c->query('CurrentUID'));
 		} );
 		
 		/**
 		 * Core
 		 */
-		
-		$container->registerService ( 'Config', function (SimpleContainer $c) {
-			return $c->query ( 'ServerContainer' )->getConfig ();
-		} );
+		$container->registerService('L10N', function(SimpleContainer $c) {
+			return $c->query('ServerContainer')->getL10N($c->query('AppName'));
+		});
+
+		$container->registerService('CurrentUID', function(IContainer $c) {
+			/** @var \OC\Server $server */
+			$server = $c->query('ServerContainer');
+
+			$user = $server->getUserSession()->getUser();
+			return ($user) ? $user->getUID() : '';
+		});
 	}
 }
