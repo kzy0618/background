@@ -13,21 +13,25 @@
 		function saveSettings() {
 			//OC.msg.startSaving('#activity_notifications_msg');
 			var post = $('#background').serialize();
+			var result = '#' + $(this).attr('name') + '-status';
 
 			$.post(OC.generateUrl('/apps/background/settings'), post)
 			  .done(function() {
-				  alert( "second success" );
+				  //alert( "second success" );
+				  $(result).text("Saved!");
 			  })
 			  .fail(function(xhr, textStatus, errorThrown) {
-			        alert(xhr.responseText + "\n" + errorThrown);
+				$(result).text("Error!");
+			        //alert(xhr.responseText + "\n" + errorThrown);
 			  })
 			  .always(function() {
-				  alert( "finished" );
+				  //alert( "finished" );
 			  });
 		}
 
 		var $activityNotifications = $('#background');
-		$activityNotifications.find('input[type=text]').change(saveSettings);
+		$activityNotifications.find('input').change(saveSettings);
+		$activityNotifications.find('select').change(saveSettings);
 		
 //		$( "#name" ).change(function saveSettings() {	
 //			alert( "Data Saved: " + $(this).attr('name') + $(this).val());

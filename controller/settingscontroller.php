@@ -13,6 +13,7 @@ namespace OCA\Background\Controller;
 
 use OCP\IRequest;
 use OCP\IConfig;
+use OCP\IL10N;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Http\DataResponse;

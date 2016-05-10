@@ -2,7 +2,7 @@
 
 namespace OCA\Background\AppInfo;
 
-use \OC\AppFramework\Utility\SimpleContainer;
+use OCP\IContainer;
 use \OCP\AppFramework\App;
 use \OCA\Background\Controller\PageController;
 use \OCA\Background\Controller\SettingsController;
@@ -28,7 +28,7 @@ class Application extends App {
 		/**
 		 * Core
 		 */
-		$container->registerService('L10N', function(SimpleContainer $c) {
+		$container->registerService('L10N', function(IContainer $c) {
 			return $c->query('ServerContainer')->getL10N($c->query('AppName'));
 		});
 
