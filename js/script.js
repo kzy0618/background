@@ -4,68 +4,64 @@
  * This file is licensed under the Affero General Public License version 3 or
  * later. See the COPYING file.
  *
- * @author Shawn <syu702@aucklanduni.ac.nz>
- * @copyright Shawn 2016
+ * @author Shawn <syu702@aucklanduni.ac.nz>, A.Daugieras <adau828@aucklanduni.ac.nz>
+ * @copyright Shawn,Daugieras 2017
  */
 
 (function ($, OC) {
 	$(document).ready(function () {
+
+		//allows to go on a other page (show one page and hide the two others)
+		$("#next").click(function(e){
+			e.preventDefault();
+	 		$('#Generaldata').addClass('hidden');
+			$('#Maoriprofil').addClass('hidden');
+			$('#Englishprofil').removeClass('hidden');
+	    	});
+
+		$("#previous2").click(function(e){
+			e.preventDefault();
+			$('#Generaldata').removeClass('hidden');
+			$('#Maoriprofil').addClass('hidden');
+			$('#Englishprofil').addClass('hidden');
+	    	});
+
+		$("#next2").click(function(e){
+			e.preventDefault();
+	 		$('#Generaldata').addClass('hidden');
+			$('#Maoriprofil').removeClass('hidden');
+			$('#Englishprofil').addClass('hidden');
+	    	});
+
+		$("#previous3").click(function(e){
+			e.preventDefault();
+			$('#Generaldata').addClass('hidden');
+			$('#Maoriprofil').addClass('hidden');
+			$('#Englishprofil').removeClass('hidden');
+	    	});
+
 		function saveSettings() {
-			//OC.msg.startSaving('#activity_notifications_msg');
 			var post = $('#background').serialize();
 			var result = '#' + $(this).attr('name') + '-status';
 
 			$.post(OC.generateUrl('/apps/background/settings'), post)
-			  .done(function() {
-				  //alert( "second success" );
+			  .done(function() {;
 				  $(result).text("Saved!");
 			  })
-			  .fail(function(xhr, textStatus, errorThrown) {
+			  .fail(function() {
 				$(result).text("Error!");
-			        //alert(xhr.responseText + "\n" + errorThrown);
 			  })
 			  .always(function() {
-				  //alert( "finished" );
 			  });
 		}
 
 		var $activityNotifications = $('#background');
+		//savesetting when users add informations from input, select or textarea
 		$activityNotifications.find('input').change(saveSettings);
 		$activityNotifications.find('select').change(saveSettings);
-		
-//		$( "#name" ).change(function saveSettings() {	
-//			alert( "Data Saved: " + $(this).attr('name') + $(this).val());
-//			var jason = $.ajax({
-//				cache: false,
-//				async: true,
-//				dataType : 'json',
-//				type: "POST",
-//				url: OC.generateUrl('/apps/background/settings'),
-//				data: "key=" + $(this).attr('name')
-//	               + "&value=" + $(this).val(),
-//	            success: function(msg){
-//	               alert( "Data Saved: " + msg  + $(this).attr('name') + $(this).val());
-//	            },
-//	            error: function(jqXHR, textStatus, errorThrown){
-//	               console.log(errorThrown);
-//	               console.log(jqXHR);
-//	            }
-//			});
-//			
-//			alert( "Data: " + jason);
-//			
-////			var post = {key: $(this).attr('name'), value: $(this).val()};
-////
-////			$.post(OC.generateUrl('/apps/background/settings'), post)
-////			  .done(function() {
-////				  alert( "second success" );
-////			  })
-////			  .fail(function(xhr, textStatus, errorThrown) {
-////			        alert(xhr.responseText + "\n" + errorThrown);
-////			  })
-////			  .always(function() {
-////				  alert( "finished" );
-////			  });
-//		});
+		$activityNotifications.find('#addr').change(saveSettings);
+		$activityNotifications.find('#edetail').change(saveSettings);
+		$activityNotifications.find('#mdetail').change(saveSettings);	
 	});
+
 })(jQuery, OC);
