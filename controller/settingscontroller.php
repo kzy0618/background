@@ -5,8 +5,8 @@
  * This file is licensed under the Affero General Public License version 3 or
  * later. See the COPYING file.
  *
- * @author Shawn <syu702@aucklanduni.ac.nz>
- * @copyright Shawn 2016
+ * @author Shawn <syu702@aucklanduni.ac.nz>, A.Daugieras <adau828@aucklanduni.ac.nz>
+ * @copyright Shawn,Daugieras 2017
  */
 
 namespace OCA\Background\Controller;
@@ -40,7 +40,15 @@ class SettingsController extends Controller {
 		$params = ['name' => $this->getItem('name'),
 			'age' => $this->getItem('age'),
 			'gender' => $this->getItem('gender'),
-			'addr' => $this->getItem('addr')];
+			'addr' => $this->getItem('addr'),
+			'eprofil' => $this->getItem('eprofil'),
+			'etype' => $this->getItem('etype'),
+			'eexposure' => $this->getItem('eexposure'),
+			'edetail' => $this->getItem('edetail'),
+			'mprofil' => $this->getItem('mprofil'),
+			'mtype' => $this->getItem('mtype'),
+			'mexposure' => $this->getItem('mexposure'),
+			'mdetail' => $this->getItem('mdetail')];
 		return new TemplateResponse('background', 'main', $params);
 	}
 
@@ -61,11 +69,19 @@ class SettingsController extends Controller {
 	 * @NoAdminRequired
      * @NoCSRFRequired
 	 */
-	public function setBackground($name, $age, $gender, $addr) {
+	public function setBackground($name, $age, $gender, $addr, $eprofil, $etype, $eexposure, $edetail, $mprofil, $mtype, $mexposure, $mdetail) {
 		$this->updateItem('name', $name);
 		$this->updateItem('age', $age);
 		$this->updateItem('gender', $gender);
 		$this->updateItem('addr', $addr);
+		$this->updateItem('eprofil', $eprofil);
+		$this->updateItem('etype', $etype);
+		$this->updateItem('eexposure', $eexposure);
+		$this->updateItem('edetail', $edetail);
+		$this->updateItem('mprofil', $mprofil);
+		$this->updateItem('mtype', $mtype);
+		$this->updateItem('mexposure', $mexposure);
+		$this->updateItem('mdetail', $mdetail);
 		return $this->getUserValue();  // templates/main.php
 	}
 }
