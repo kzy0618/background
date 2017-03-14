@@ -2,10 +2,10 @@
 <info>
     <id>background</id>
     <name>Background</name>
-    <description>My first ownCloud app</description>
+    <description>Application which allows to register informations on the users link to the use of recorder VoNZ application</description>
     <licence>AGPL</licence>
-    <author>Shawn</author>
-    <version>0.0.1</version>
+    <author>Shawn, A.Daugieras</author>
+    <version>0.0.2</version>
     <namespace>Background</namespace>
     <category>tool</category>
     <dependencies>
