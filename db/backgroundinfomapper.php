@@ -7,17 +7,17 @@ use OCP\AppFramework\Db\Mapper;
 
 class BackgroundInforMapper extends Mapper {
     public function __construct(IDBConnection $db){
-    	parent::__construct($db, 'background_infor');
+    	parent::__construct($db,'background','\OCA\Background\Db\backgroundinfo');
     }
 
     public function find($id){
-    	$sql = 'select * from *PERFIX*background_infor '.
-      	'where id = ?';
+    	$sql = 'SELECT * FROM *PREFIX*background '.
+      	'WHERE id = ?';
     	return $this->findEntity($sql, [$id]);
     }
     
     public function findAll($limit=null, $offset=null){
-    	$sql = 'select * from *PREFIX*background_infor';
+    	$sql = 'SELECT * FROM *PREFIX*background';
     	return $this->findEntities($sql, $limit, $offset);
     }
 }
