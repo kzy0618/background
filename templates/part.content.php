@@ -41,7 +41,7 @@
 
 <div id="Englishprofil" class="hidden">
   	<div class="form-group">
-		    <label for="eprofil" class="col-sm-2 control-label update">English profil</label>
+		    <label for="eprofil" class="col-sm-2 control-label update">English profile</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="eprofil" name="eprofil">
 		      <option value="L1" <?php if (($_['eprofil']) == 'L1') echo ' selected="selected"'; ?>>L1</option>
@@ -52,7 +52,7 @@
 		    </div>
 	</div>
   	<div class="form-group">
-		    <label for="etype" class="col-sm-2 control-label update">if English profil = L1 select :</label>
+		    <label for="etype" class="col-sm-2 control-label update">if English profile = L1 select :</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="etype" name="etype">
 		      <option value="English(Australia)" <?php if (($_['etype']) == 'English(Australia)') echo ' selected="selected"'; ?>>English (Australia)</option>
@@ -78,7 +78,7 @@
 		    </div>
 	</div>
 	<div class="form-group">
-		    <label for="eexposure" class="col-sm-2 control-label update">if English profil = L2 select :</label>
+		    <label for="eexposure" class="col-sm-2 control-label update">if English profile = L2 select :</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="eexposure" name="eexposure">
 		      <option value="casual" <?php if (($_['eexposure']) == 'casual') echo ' selected="selected"'; ?>>casual</option>
@@ -103,7 +103,7 @@
 </div>
 <div id="Maoriprofil" class="hidden">
   	<div class="form-group">
-		    <label for="mprofil" class="col-sm-2 control-label update">Maori profil</label>
+		    <label for="mprofil" class="col-sm-2 control-label update">Maori profile</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="mprofil" name="mprofil">
 		      <option value="L1" <?php if (($_['mprofil']) == 'L1') echo ' selected="selected"'; ?>>L1</option>
@@ -114,7 +114,7 @@
 		    </div>
 	</div>
   	<div class="form-group">
-		    <label for="mtype" class="col-sm-2 control-label update">if Maori profil = L1 select :</label>
+		    <label for="mtype" class="col-sm-2 control-label update">if Maori profile = L1 select :</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="mtype" name="mtype">
 		      <option value="Maori(NorthIsland)" <?php if (($_['mtype']) == 'Maori(NorthIsland)') echo ' selected="selected"'; ?>>Maori (NorthIsland)</option>
@@ -125,7 +125,7 @@
 		    </div>
 	</div>
 	<div class="form-group">
-		    <label for="mexposure" class="col-sm-2 control-label update">if Maori profil = L2 select :</label>
+		    <label for="mexposure" class="col-sm-2 control-label update">if Maori profile = L2 select :</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="mexposure" name="mexposure">
 		      <option value="casual" <?php if (($_['mexposure']) == 'casual') echo ' selected="selected"'; ?>>casual</option>
