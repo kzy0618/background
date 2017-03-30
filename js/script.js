@@ -62,6 +62,12 @@
 		$activityNotifications.find('#addr').change(saveSettings);
 		$activityNotifications.find('#edetail').change(saveSettings);
 		$activityNotifications.find('#mdetail').change(saveSettings);	
+
+/* If you add new varaible and use a textarea you have to add this line :
+
+		$activityNotifications.find('#textareId').change(saveSettings);	
+
+*/
 	});
 
 })(jQuery, OC);
