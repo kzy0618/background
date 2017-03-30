@@ -16,9 +16,12 @@ class BackgroundInfo extends Entity{
 	protected $mtype;
 	protected $mexposure;
 	protected $mdetail;
+	// Here you can add some variables
+
 
 	public function __construct(){
 		$this->addType('age', 'integer');
+		//If types of new variables are different from text specify their types here
 	}
 }
 ?>
