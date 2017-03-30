@@ -1,5 +1,5 @@
 <form id="background">
-
+<!-- First page -->
 <div id="Generaldata">
 	<div class="form-group">
     		<label for="name" class="col-sm-2 control-label">Name</label>
@@ -33,12 +33,13 @@
 		    <label id="addr-status"></label>
 		    </div>
 	</div> 	
+<!-- Here you can put new variables for General data -->
 	<div>
 		<button id="previous" disabled>Previous</button>
 		<button id="next">Next</button>	    
 	</div>
 </div>
-
+<!-- Second page -->
 <div id="Englishprofil" class="hidden">
   	<div class="form-group">
 		    <label for="eprofil" class="col-sm-2 control-label update">English profile</label>
@@ -96,14 +97,16 @@
 		    <label id="edetail-status"></label>
 		    </div>
 	</div>
+<!-- Here you can put new variables for English profile -->
 	<div class="form-group">
 		<button id="previous2">Previous</button>
 		<button id="next2">Next</button>
 	</div> 	
 </div>
+<!-- Third page -->
 <div id="Maoriprofil" class="hidden">
   	<div class="form-group">
-		    <label for="mprofil" class="col-sm-2 control-label update">Maori profile</label>
+		    <label for="mprofil" class="col-sm-2 control-label update">Maori profil</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="mprofil" name="mprofil">
 		      <option value="L1" <?php if (($_['mprofil']) == 'L1') echo ' selected="selected"'; ?>>L1</option>
@@ -143,11 +146,55 @@
 		    <label id="mdetail-status"></label>
 		    </div>
 	</div>
+<!-- Here you can put new variables for maori profile -->
 	<div class="form-group">
 		<button id="previous3">Previous</button>
 		<button id="next3" disabled>Next</button>
 	</div> 	
 </div>
 </form>
+
+<!-- Help for devellopers 
+
+For each new variable put a divison describing an input, a selection or a text area in the associate section (Generaldata, Englishprofile, Maoriprofile).
+
+Add a input :
+
+
+	<div class="form-group">
+		    <label for="inputName" class="col-sm-2 control-label">LabelName</label>
+		    <div class="col-sm-10">
+		    <input type="number/text/button/checkbox/date/image/... = What do you except in the input" class="form-control update" id="inputId" name="inputName" value="<?php p($_['Variable']); ?>" placeholder="default text on input"/>
+		    <label id="inputname-status"></label>
+		    </div>
+ 	</div>
+
+
+Add a selection :
+
+  	<div class="form-group">
+		    <label for="selectame" class="col-sm-2 control-label">LabelName</label>
+		    <div class="col-sm-10">
+		    <select class="form-control" id="selectId" name="selectName">
+		      <option value="option1" <?php if (($_['Variable']) == 'option1') echo ' selected="selected"'; ?>>option1</option>
+		      <option value="option2" <?php if (($_['Variable']) == 'option2') echo ' selected="selected"'; ?>>option2</option>
+		      <option value="option3" <?php if (($_['Variable']) == 'option3') echo ' selected="selected"'; ?>>option3</option>
+		    </select>
+		    <label id="selectname-status"></label>
+		    </div>
+	</div>
+
+
+Add a textarea :
+
+    	<div class="form-group">
+		    <label for="textareaName" class="col-sm-2 control-label">LabelName</label>
+		    <div class="col-sm-10">
+		    <textarea class="form-control update" id="textareaId" name="textareaName" placeholder="default text on textarea"><?php p($_['Variable']); ?></textarea>
+		    <label id="textareaname-status"></label>
+		    </div>
+	</div>
+
+ -->
 
 
