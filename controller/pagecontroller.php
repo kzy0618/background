@@ -63,6 +63,9 @@ class PageController extends Controller {
 		 $background->setMtype($mtype);
 		 $background->setMexposure($mexposure);
 		 $background->setMdetail($mdetail);
+
+//For each new variable add a line at this function : $background->setVariableName($variableName);
+
 		 return new DataResponse($this->mapper->insert($background));
 	 }
 }

@@ -48,7 +48,11 @@ class SettingsController extends Controller {
 			'mprofil' => $this->getItem('mprofil'),
 			'mtype' => $this->getItem('mtype'),
 			'mexposure' => $this->getItem('mexposure'),
-			'mdetail' => $this->getItem('mdetail')];
+			'mdetail' => $this->getItem('mdetail'),
+
+//For each new varaible add a new line at this function : 'variableName' => $this->getItem('variableName'),
+
+			];
 		return new TemplateResponse('background', 'main', $params);
 	}
 
@@ -82,6 +86,9 @@ class SettingsController extends Controller {
 		$this->updateItem('mtype', $mtype);
 		$this->updateItem('mexposure', $mexposure);
 		$this->updateItem('mdetail', $mdetail);
+
+//For each new varaible add a new line at this function : $this->updateItem('variableName', $variableName);
+
 		return $this->getUserValue();  // templates/main.php
 	}
 }
