@@ -59,7 +59,6 @@
 		//savesetting when users add informations from input, select or textarea
 		$activityNotifications.find('input').change(saveSettings);
 		$activityNotifications.find('select').change(saveSettings);
-		$activityNotifications.find('#addr').change(saveSettings);
 		$activityNotifications.find('#edetail').change(saveSettings);
 		$activityNotifications.find('#mdetail').change(saveSettings);	
 
