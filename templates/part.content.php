@@ -26,13 +26,30 @@
 		    <label id="gender-status"></label>
 		    </div>
 	</div>
-    	<div class="form-group">
-		    <label for="addr" class="col-sm-2 control-label">Address</label>
+  	<div class="form-group">
+		    <label for="addr" class="col-sm-2 control-label update">Location</label>
 		    <div class="col-sm-10">
-		    <textarea class="form-control update" id="addr" name="addr" placeholder="Your residence"><?php p($_['addr']); ?></textarea>
+		    <select class="form-control" id="addr" name="addr">
+		      <option value="Northland" <?php if (($_['addr']) == 'Northland') echo ' selected="selected"'; ?>>Northland</option>
+		      <option value="Auckland" <?php if (($_['addr']) == 'Auckland') echo ' selected="selected"'; ?>>Auckland</option>
+		      <option value="Waikato" <?php if (($_['addr']) == 'Waikato') echo ' selected="selected"'; ?>>Waikato</option>
+		      <option value="Bay of Plenty" <?php if (($_['addr']) == 'Bay of Plenty') echo ' selected="selected"'; ?>>Bay of Plenty</option>
+		      <option value="Gisborne" <?php if (($_['addr']) == 'Gisborne') echo ' selected="selected"'; ?>>Gisborne</option>
+		      <option value="Hawke Bay" <?php if (($_['addr']) == 'Hawke Bay') echo ' selected="selected"'; ?>>Hawke Bay</option>
+		      <option value="Taranaki" <?php if (($_['addr']) == 'Taranaki') echo ' selected="selected"'; ?>>Taranaki</option>
+		      <option value="Manawatu-Wanganui" <?php if (($_['addr']) == 'Manawatu-Wanganui') echo ' selected="selected"'; ?>>Manawatu-Wanganui</option>
+		      <option value="Wellington" <?php if (($_['addr']) == 'Wellington') echo ' selected="selected"'; ?>>Wellington</option>
+		      <option value="Marlborough" <?php if (($_['addr']) == 'Marlborough') echo ' selected="selected"'; ?>>Marlborough</option>
+		      <option value="Tasman" <?php if (($_['addr']) == 'Tasman') echo ' selected="selected"'; ?>>Tasman</option>
+		      <option value="West Coast" <?php if (($_['addr']) == 'West Coast') echo ' selected="selected"'; ?>>West Coast</option>
+		      <option value="Canterbury" <?php if (($_['addr']) == 'Canterbury') echo ' selected="selected"'; ?>>Canterbury</option>
+		      <option value="Otago" <?php if (($_['addr']) == 'Otago') echo ' selected="selected"'; ?>>Otago</option>
+		      <option value="Southland" <?php if (($_['addr']) == 'Southland') echo ' selected="selected"'; ?>>Southland</option>
+		      <option value="other" <?php if (($_['addr']) == 'other') echo ' selected="selected"'; ?>>other</option>
+		    </select>
 		    <label id="addr-status"></label>
 		    </div>
-	</div> 	
+	</div>
 <!-- Here you can put new variables for General data -->
 	<div>
 		<button id="previous" disabled>Previous</button>
