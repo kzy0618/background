@@ -49,6 +49,7 @@ class SettingsController extends Controller {
 			'mtype' => $this->getItem('mtype'),
 			'mexposure' => $this->getItem('mexposure'),
 			'mdetail' => $this->getItem('mdetail'),
+			'nztime' => $this->getItem('nztime'),
 
 //For each new varaible add a new line at this function : 'variableName' => $this->getItem('variableName'),
 
@@ -73,7 +74,7 @@ class SettingsController extends Controller {
 	 * @NoAdminRequired
      * @NoCSRFRequired
 	 */
-	public function setBackground($name, $age, $gender, $addr, $eprofil, $etype, $eexposure, $edetail, $mprofil, $mtype, $mexposure, $mdetail) {
+	public function setBackground($name, $age, $gender, $addr, $eprofil, $etype, $eexposure, $edetail, $mprofil, $mtype, $mexposure, $mdetail, $nztime) {
 		$this->updateItem('name', $name);
 		$this->updateItem('age', $age);
 		$this->updateItem('gender', $gender);
@@ -86,7 +87,8 @@ class SettingsController extends Controller {
 		$this->updateItem('mtype', $mtype);
 		$this->updateItem('mexposure', $mexposure);
 		$this->updateItem('mdetail', $mdetail);
-
+		$this->updateItem('nztime', $nztime);
+		
 //For each new varaible add a new line at this function : $this->updateItem('variableName', $variableName);
 
 		return $this->getUserValue();  // templates/main.php
