@@ -107,6 +107,13 @@
 		    <label id="eexposure-status"></label>
 		    </div>
 	</div>
+	<div class="form-group">
+		    <label for="nztime" class="col-sm-2 control-label">For how long time do(did) you live in New Zealand ?</label>
+		    <div class="col-sm-10">
+		    <input type="number" class="form-control update" id="nztime" name="nztime" value="<?php p($_['nztime']); ?>" placeholder="Living Time"/>
+		    <label id="nztime-status"></label>
+		    </div>
+ 	</div>
     	<div class="form-group">
 		    <label for="edetail" class="col-sm-2 control-label">Detail</label>
 		    <div class="col-sm-10">
