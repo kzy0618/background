@@ -49,7 +49,7 @@ class PageController extends Controller {
 		return new TemplateResponse('background', 'main', $params);  // templates/main.php
 	}
 
-	 public function create($name, $age, $gender, $addr, $eprofil, $etype, $eexposure, $edetail, $mprofil, $mtype, $mexposure, $mdetail) {
+	 public function create($name, $age, $gender, $addr, $eprofil, $etype, $eexposure, $edetail, $mprofil, $mtype, $mexposure, $mdetail, $nztime) {
 		 $background = new backgroundinfo();
 		 $background->setName($name);
 		 $background->setAge($age);
@@ -63,6 +63,7 @@ class PageController extends Controller {
 		 $background->setMtype($mtype);
 		 $background->setMexposure($mexposure);
 		 $background->setMdetail($mdetail);
+		 $background->setNztime($nztime);
 
 //For each new variable add a line at this function : $background->setVariableName($variableName);
 
