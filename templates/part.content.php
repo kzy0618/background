@@ -33,7 +33,7 @@
 		      <option value="Northland" <?php if (($_['addr']) == 'Northland') echo ' selected="selected"'; ?>>Northland</option>
 		      <option value="Auckland" <?php if (($_['addr']) == 'Auckland') echo ' selected="selected"'; ?>>Auckland</option>
 		      <option value="Waikato" <?php if (($_['addr']) == 'Waikato') echo ' selected="selected"'; ?>>Waikato</option>
-		      <option value="Bay of Plenty" <?php if (($_['addr']) == 'Bay of Plenty') echo ' selected="selected"'; ?>>Bay of Plenty</option>
+		      <option value="BayOfPlenty" <?php if (($_['addr']) == 'BayOfPlenty') echo ' selected="selected"'; ?>>Bay of Plenty</option>
 		      <option value="Gisborne" <?php if (($_['addr']) == 'Gisborne') echo ' selected="selected"'; ?>>Gisborne</option>
 		      <option value="Hawke Bay" <?php if (($_['addr']) == 'Hawke Bay') echo ' selected="selected"'; ?>>Hawke Bay</option>
 		      <option value="Taranaki" <?php if (($_['addr']) == 'Taranaki') echo ' selected="selected"'; ?>>Taranaki</option>
