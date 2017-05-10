@@ -19,9 +19,9 @@
 		    <label for="gender" class="col-sm-2 control-label update">Gender</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="gender" name="gender">
+		      <option value="other" <?php if (($_['gender']) == 'other') echo ' selected="selected"'; ?>>other</option>
 		      <option value="male" <?php if (($_['gender']) == 'male') echo ' selected="selected"'; ?>>male</option>
 		      <option value="female" <?php if (($_['gender']) == 'female') echo ' selected="selected"'; ?>>female</option>
-		      <option value="other" <?php if (($_['gender']) == 'other') echo ' selected="selected"'; ?>>other</option>
 		    </select>
 		    <label id="gender-status"></label>
 		    </div>
@@ -30,6 +30,7 @@
 		    <label for="addr" class="col-sm-2 control-label update">Location</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="addr" name="addr">
+		      <option value="other" <?php if (($_['addr']) == 'other') echo ' selected="selected"'; ?>>other</option>
 		      <option value="Northland" <?php if (($_['addr']) == 'Northland') echo ' selected="selected"'; ?>>Northland</option>
 		      <option value="Auckland" <?php if (($_['addr']) == 'Auckland') echo ' selected="selected"'; ?>>Auckland</option>
 		      <option value="Waikato" <?php if (($_['addr']) == 'Waikato') echo ' selected="selected"'; ?>>Waikato</option>
@@ -45,7 +46,6 @@
 		      <option value="Canterbury" <?php if (($_['addr']) == 'Canterbury') echo ' selected="selected"'; ?>>Canterbury</option>
 		      <option value="Otago" <?php if (($_['addr']) == 'Otago') echo ' selected="selected"'; ?>>Otago</option>
 		      <option value="Southland" <?php if (($_['addr']) == 'Southland') echo ' selected="selected"'; ?>>Southland</option>
-		      <option value="other" <?php if (($_['addr']) == 'other') echo ' selected="selected"'; ?>>other</option>
 		    </select>
 		    <label id="addr-status"></label>
 		    </div>
@@ -62,9 +62,9 @@
 		    <label for="eprofil" class="col-sm-2 control-label update">English profile</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="eprofil" name="eprofil">
+		      <option value="other" <?php if (($_['eprofil']) == 'other') echo ' selected="selected"'; ?>>other</option>
 		      <option value="L1" <?php if (($_['eprofil']) == 'L1') echo ' selected="selected"'; ?>>L1</option>
 		      <option value="L2" <?php if (($_['eprofil']) == 'L2') echo ' selected="selected"'; ?>>L2</option>
-		      <option value="other" <?php if (($_['eprofil']) == 'other') echo ' selected="selected"'; ?>>other</option>
 		    </select>
 		    <label id="eprofil-status"></label>
 		    </div>
@@ -73,6 +73,7 @@
 		    <label for="etype" class="col-sm-2 control-label update">if English profile = L1 select :</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="etype" name="etype">
+		      <option value="other" <?php if (($_['etype']) == 'other') echo ' selected="selected"'; ?>>other</option>
 		      <option value="English(Australia)" <?php if (($_['etype']) == 'English(Australia)') echo ' selected="selected"'; ?>>English (Australia)</option>
 		      <option value="English(Belize)" <?php if (($_['etype']) == 'English(Belize)') echo ' selected="selected"'; ?>>English (Belize)</option>
 		      <option value="English(Canada)" <?php if (($_['etype']) == 'English(Canada)') echo ' selected="selected"'; ?>>English (Canada)</option>
@@ -90,7 +91,6 @@
 		      <option value="English(UK)" <?php if (($_['etype']) == 'English(UK)') echo ' selected="selected"'; ?>>English (UK)</option>
 		      <option value="English(USA)" <?php if (($_['etype']) == 'English(USA)') echo ' selected="selected"'; ?>>English (USA)</option>
 		      <option value="English(Zimbabwe)" <?php if (($_['etype']) == 'English(Zimbabwe)') echo ' selected="selected"'; ?>>English (Zimbabwe)</option>
-		      <option value="other" <?php if (($_['etype']) == 'other') echo ' selected="selected"'; ?>>other</option>
 		    </select>
 		    <label id="etype-status"></label>
 		    </div>
@@ -133,9 +133,9 @@
 		    <label for="mprofil" class="col-sm-2 control-label update">Maori profil</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="mprofil" name="mprofil">
+		      <option value="other" <?php if (($_['mprofil']) == 'other') echo ' selected="selected"'; ?>>other</option>
 		      <option value="L1" <?php if (($_['mprofil']) == 'L1') echo ' selected="selected"'; ?>>L1</option>
 		      <option value="L2" <?php if (($_['mprofil']) == 'L2') echo ' selected="selected"'; ?>>L2</option>
-		      <option value="other" <?php if (($_['mprofil']) == 'other') echo ' selected="selected"'; ?>>other</option>
 		    </select>
 		    <label id="mprofil-status"></label>
 		    </div>
@@ -144,9 +144,9 @@
 		    <label for="mtype" class="col-sm-2 control-label update">if Maori profile = L1 select :</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="mtype" name="mtype">
+		      <option value="other" <?php if (($_['mtype']) == 'other') echo ' selected="selected"'; ?>>other</option>
 		      <option value="Maori(NorthIsland)" <?php if (($_['mtype']) == 'Maori(NorthIsland)') echo ' selected="selected"'; ?>>Maori (NorthIsland)</option>
 		      <option value="Maori(SouthIsland)" <?php if (($_['mtype']) == 'Maori(SouthIsland)') echo ' selected="selected"'; ?>>Maori (SouthIsland)</option>
-		      <option value="other" <?php if (($_['mtype']) == 'other') echo ' selected="selected"'; ?>>other</option>
 		    </select>
 		    <label id="mtype-status"></label>
 		    </div>
