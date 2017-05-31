@@ -52,7 +52,6 @@
 	</div>
 <!-- Here you can put new variables for General data -->
 	<div>
-		<button id="previous" disabled>Previous</button>
 		<button id="next">Next</button>	    
 	</div>
 </div>
@@ -63,14 +62,14 @@
 		    <div class="col-sm-10">
 		    <select class="form-control" id="eprofil" name="eprofil">
 		      <option value="other" <?php if (($_['eprofil']) == 'other') echo ' selected="selected"'; ?>>other</option>
-		      <option value="L1" <?php if (($_['eprofil']) == 'L1') echo ' selected="selected"'; ?>>L1</option>
-		      <option value="L2" <?php if (($_['eprofil']) == 'L2') echo ' selected="selected"'; ?>>L2</option>
+		      <option value="L1" <?php if (($_['eprofil']) == 'L1') echo ' selected="selected"'; ?>>Mother tongue</option>
+		      <option value="L2" <?php if (($_['eprofil']) == 'L2') echo ' selected="selected"'; ?>>Second language</option>
 		    </select>
 		    <label id="eprofil-status"></label>
 		    </div>
 	</div>
   	<div class="form-group">
-		    <label for="etype" class="col-sm-2 control-label update">if English profile = L1 select :</label>
+		    <label for="etype" class="col-sm-2 control-label update">if you are Mother tongue select :</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="etype" name="etype">
 		      <option value="other" <?php if (($_['etype']) == 'other') echo ' selected="selected"'; ?>>other</option>
@@ -96,7 +95,7 @@
 		    </div>
 	</div>
 	<div class="form-group">
-		    <label for="eexposure" class="col-sm-2 control-label update">if English profile = L2 select :</label>
+		    <label for="eexposure" class="col-sm-2 control-label update">if you arenSecond language select :</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="eexposure" name="eexposure">
 		      <option value="casual" <?php if (($_['eexposure']) == 'casual') echo ' selected="selected"'; ?>>casual</option>
@@ -108,7 +107,7 @@
 		    </div>
 	</div>
 	<div class="form-group">
-		    <label for="nztime" class="col-sm-2 control-label">For how long time have(had) you been in New Zealand ?</label>
+		    <label for="nztime" class="col-sm-2 control-label">For how many years have(had) you been in New Zealand ?</label>
 		    <div class="col-sm-10">
 		    <input type="number" class="form-control update" id="nztime" name="nztime" value="<?php p($_['nztime']); ?>" placeholder="Living Time"/>
 		    <label id="nztime-status"></label>
@@ -134,14 +133,14 @@
 		    <div class="col-sm-10">
 		    <select class="form-control" id="mprofil" name="mprofil">
 		      <option value="other" <?php if (($_['mprofil']) == 'other') echo ' selected="selected"'; ?>>other</option>
-		      <option value="L1" <?php if (($_['mprofil']) == 'L1') echo ' selected="selected"'; ?>>L1</option>
-		      <option value="L2" <?php if (($_['mprofil']) == 'L2') echo ' selected="selected"'; ?>>L2</option>
+		      <option value="L1" <?php if (($_['mprofil']) == 'L1') echo ' selected="selected"'; ?>>Mother tongue</option>
+		      <option value="L2" <?php if (($_['mprofil']) == 'L2') echo ' selected="selected"'; ?>>Second language</option>
 		    </select>
 		    <label id="mprofil-status"></label>
 		    </div>
 	</div>
   	<div class="form-group">
-		    <label for="mtype" class="col-sm-2 control-label update">if Maori profile = L1 select :</label>
+		    <label for="mtype" class="col-sm-2 control-label update">if you are Mother tongue select :</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="mtype" name="mtype">
 		      <option value="other" <?php if (($_['mtype']) == 'other') echo ' selected="selected"'; ?>>other</option>
@@ -152,7 +151,7 @@
 		    </div>
 	</div>
 	<div class="form-group">
-		    <label for="mexposure" class="col-sm-2 control-label update">if Maori profile = L2 select :</label>
+		    <label for="mexposure" class="col-sm-2 control-label update">if you are Second language select :</label>
 		    <div class="col-sm-10">
 		    <select class="form-control" id="mexposure" name="mexposure">
 		      <option value="casual" <?php if (($_['mexposure']) == 'casual') echo ' selected="selected"'; ?>>casual</option>
@@ -173,7 +172,6 @@
 <!-- Here you can put new variables for maori profile -->
 	<div class="form-group">
 		<button id="previous3">Previous</button>
-		<button id="next3" disabled>Next</button>
 	</div> 	
 </div>
 </form>
