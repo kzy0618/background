@@ -9,6 +9,6 @@
     <namespace>Background</namespace>
     <category>tool</category>
     <dependencies>
-        <owncloud min-version="8.1" max-version="9.1"/>
+        <owncloud min-version="8.1" max-version="10.0"/>
     </dependencies>
 </info>
